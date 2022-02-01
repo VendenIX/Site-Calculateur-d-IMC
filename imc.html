@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Compteur de calories</title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="21904263" />
+    <style>
+        body {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        #conteneur {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 20px;
+        }
+
+        #selection {
+            min-width: 500px;
+            border-right: 1px solid black;
+        }
+
+        #selection div {
+            margin-bottom: 10px;
+        }
+    </style>
+    <script src="imc.js"></script>
+
+</head>
+
+<body>
+    <h1>Calculateur d'IMC par Romain</h1>
+    <div id="conteneur">
+        <form id="selection">
+            <h2>Veuillez rentrer votre poids:</h2>
+
+            <div><label>Votre poids: <input type="text" name="poids"> (en kilos)</label></div>
+            <div><label>Votre taille: <input type="text" name="poids"> (en m)</label></div>
+            <button type="submit">Ajouter</button>
+        </form>
+        <section>
+            <h2>Résultat:</h2>
+            <div id="laSection"></div>
+        </section>
+    </div>
+        <figure>
+            <img src="imc.PNG">
+        </figure>
+    <script>
+        "use strict";
+        imc();
+    </script>
+</body>
+
+</html>
